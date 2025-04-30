@@ -9,7 +9,7 @@ import Resume from "./components/Resume/ResumeNew";
 import Education from "./components/Education/Education";
 import Courses from "./components/Courses"; 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes,
   Navigate
