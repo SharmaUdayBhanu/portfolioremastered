@@ -8,12 +8,7 @@ import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import Education from "./components/Education/Education";
 import Courses from "./components/Courses"; 
-import {
-  HashRouter as Router,
-  Route,
-  Routes,
-  Navigate
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
@@ -31,7 +26,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/portfolioremastered">
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
