@@ -1,0 +1,103 @@
+/* Home.css */
+
+/* Image Column Styling */
+.image-column {
+  padding-left: 80px !important;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; /* Changed to align top */
+  margin-top: -40px; /* Pull column up */
+  min-height: 500px; /* Reduced height */
+}
+
+/* Image Wrapper Container */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+/* Oval Frame Container */
+.oval-frame {
+  position: relative;
+  width: 360px;
+  height: 460px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 
+    0 0 0 5px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.4),
+    inset 0 0 30px rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Main Image Styling - Cropped at torso */
+.body-glow-image {
+  width: 100%;
+  height: 120%; /* Extra height for cropping */
+  object-fit: cover;
+  object-position: top -70px center; /* Crop from top */
+  position: relative;
+  margin-top: -7%; /* Pull image up further */
+}
+
+/* Body Glow Effect */
+.glossy-border {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0) 60%,
+      rgba(255, 255, 255, 0.3) 100%
+    );
+  filter: blur(10px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Floor Effect Removed (since we're cropping at torso) */
+
+/* Filter SVG */
+.filter-svg {
+  width: 0;
+  height: 0;
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .image-column {
+    padding-left: 40px !important;
+    margin-top: -30px;
+  }
+  
+  .oval-frame {
+    width: 300px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-column {
+    padding-left: 20px !important;
+    margin-top: -20px;
+    justify-content: center;
+  }
+  
+  .oval-frame {
+    width: 260px;
+    height: 340px;
+  }
+  
+  .body-glow-image {
+    object-position: top -30px center;
+  }
+}

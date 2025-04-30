@@ -1,0 +1,57 @@
+/* === Education Section Base === */
+.education-container {
+  padding: 60px 0;
+  background-color: transparent; /* Let Particle show through */
+  color: white;
+}
+
+/* === Timeline Vertical Line === */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  margin-top: 60px;
+  border-left: 4px solid #6c63ff;
+}
+
+/* === Timeline Item === */
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* === Dot === */
+.timeline-dot {
+  position: absolute;
+  left: -13px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #6c63ff;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* === Card/Content === */
+.timeline-content {
+  margin-left: 20px; /* 👈 Adds space between dot and card */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #6c63ff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  color: white;
+  font-size: 1rem;
+}
+
+
+/* === Heading Below First Dot === */
+.education-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-left: 50px; /* Increased left margin */
+  margin-bottom: 40px;
+  position: relative;
+  text-align: left;
+}
+
